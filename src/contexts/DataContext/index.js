@@ -26,7 +26,8 @@ export const DataProvider = ({ children }) => {
       setError(err);
     }
   }, []);
-  const byDate = data?.events.sort((evtA, evtB) =>
+  const events = data?.events;
+  const byDate = events?.sort((evtA, evtB) =>
   new Date(evtA.date) > new Date(evtB.date) ? -1 : 1
   );
   useEffect(() => {
