@@ -19,12 +19,12 @@ const Field = ({ type = FIELD_TYPES.INPUT_TEXT, label, name, placeholder }) => {
           placeholder={placeholder}
           data-testid="field-testid"
           required
-          pattern="[A-Za-z]{*}"
+          pattern="[a-zA-Z]*"
         />
       );
       break;
     case FIELD_TYPES.TEXTAREA:
-      component = <textarea name={name} data-testid="field-testid" pattern="[A-Za-z]{*}"  required />;
+      component = <textarea name={name} data-testid="field-testid"  required />;
       break;
       case FIELD_TYPES.INPUT_EMAIL:
         component = (
@@ -46,7 +46,7 @@ const Field = ({ type = FIELD_TYPES.INPUT_TEXT, label, name, placeholder }) => {
           placeholder={placeholder}
           data-testid="field-testid"
           required
-          pattern="[A-Za-z]{*}"
+          pattern="[A-Z][a-zA-Z]*"
         />
       );
       
