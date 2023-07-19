@@ -27,10 +27,10 @@ export const DataProvider = ({ children }) => {
     }
   }, []);
   const events = data?.events;
-  const byDate = events?.sort((evtA, evtB) =>
+  const last = events?.sort((evtA, evtB) =>
   new Date(evtA.date) > new Date(evtB.date) ? -1 : 1
-  );
-  const last = data?.events[0];
+  )[0];
+  
   useEffect(() => {
     if (data) return
     getData();
@@ -43,7 +43,6 @@ export const DataProvider = ({ children }) => {
         data,
         error,
         last,
-        byDate,
       }}
     >
       {children}
