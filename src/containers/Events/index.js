@@ -19,10 +19,6 @@ const EventList = () => {
        return event.type === type;
       }
       return true
-      // if((currentPage -1) * PER_PAGE <= index && PER_PAGE  * currentPage > index){
-      //   return true
-      // }
-      // return false
     });
     
   
